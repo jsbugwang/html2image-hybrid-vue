@@ -1,12 +1,19 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <router-view />
 </template>
 
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
 <style>
+html,
+body {
+  margin: 0;
+  pading: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,16 +22,20 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+.full-height {
+  height: 100%;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.btn-group {
+  display: flex;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.full-btn {
+  display: block;
+  flex-grow: 1;
+}
+.almost-full-btn {
+  display: block;
+  flex-grow: 1;
+  margin: 0 30px !important;
 }
 </style>
