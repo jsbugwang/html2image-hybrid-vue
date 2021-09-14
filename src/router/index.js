@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Index from '../views/Index.vue'
 
 const routes = [
@@ -18,7 +18,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  // 在安卓本地加载，不支持 H5 history 模式
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 })
 
